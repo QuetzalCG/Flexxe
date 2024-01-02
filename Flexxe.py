@@ -114,6 +114,7 @@ class Flexxe:
             if pattern.regex.search(webpage.html):
                 self._setDetectedApp(webpage.url, tech_fingerprint, 'html', pattern, value=webpage.html)
                 has_tech = True
+                
         #? analyze dom patterns
         #* css selector, list of css selectors, or dict from css selector to dict with some of keys:
         #*           - "exists": "": only check if the selector matches somthing, equivalent to the list form. 

@@ -1,8 +1,8 @@
-Flexxe | Install
------------------
-``-- Step 1``
-
->>> git clone https://github.com/QuetzalCG/Flexxe.git
+## How Install Flexxe!
+---
+**Step One**: `Clone the repository`
+```bash
+git clone https://github.com/QuetzalCG/Flexxe.git```
 
 ``-- Step 2``
 

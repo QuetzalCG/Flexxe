@@ -34,6 +34,8 @@ webpage = WebPage.newFURL('http://example.com')
 flexxe = Flexxe.latest()
 flexxe.analyze(webpage)
 ```
+
+***Response:***
 ```json
 {
     "status": true,

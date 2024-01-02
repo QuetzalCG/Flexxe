@@ -1,3 +1,8 @@
+## Flexxe: Lib 
+
+***Library to visualize the technologies used by a website, based on wappalizer***
+
+
 ## How Install Flexxe!
 
 **Step One**: `Clone the repository`
@@ -12,6 +17,8 @@ git clone https://github.com/QuetzalCG/Flexxe.git
 ```bash
 pip install -r Flexxe/requirements.txt
 ```
+
+
 
 
 

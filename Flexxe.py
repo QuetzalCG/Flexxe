@@ -370,16 +370,13 @@ def analyze(url:str, useragent:str = None) -> Dict[str, Dict[str, Any]]:
     """
     Quick utility method to analyze a website with minimal configurable options. 
 
-    :See: `WebPage` and `Flexxe`. 
-
     :Parameters:
         - `url`: URL
-        - `update`: Update the technologies file from the internet
         - `useragent`: Request user agent
-        - `timeout`: Request timeout
     
     :Return: 
-        `dict`. Just as `Flexxe.analyzeWithVersionsAndCategories`. 
+        `dict`. Just as `Flexxe.analyzeWithCategories`. 
+
     :Note: More information might be added to the returned values in the future
     """
     #//? Create Flexxe

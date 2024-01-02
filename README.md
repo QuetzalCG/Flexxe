@@ -6,25 +6,35 @@
 git clone https://github.com/QuetzalCG/Flexxe.git
 ```
 
-``-- Step 2``
 
->>> pip install -r Flexxe/requirements.txt
+**Step Two**: `Install dependencies`
 
-Flexxe | USAGE 
------------------
+```bash
+pip install -r Flexxe/requirements.txt
+```
 
-The API exposes two objects: ``Flexxe.Flexxe`` and ``Flexxe.WebPage``. 
 
->>> from Flexxe import Flexxe, WebPage
 
-First create a WebPage. The following code creates a webpage with the ``request`` module. 
+## How Use Flexxe!
+*The API exposes two objects: ``Flexxe.Flexxe`` and ``Flexxe.WebPage``. *
 
->>> webpage = WebPage.newFURL('http://example.com')
+```python
+from Flexxe import Flexxe, WebPage
+```
 
-Then analyze it with Flexxe.
+*First create a WebPage. The following code creates a webpage with the ``request`` module. *
 
->>> flexxe = Flexxe.latest()
->>> flexxe.analyze(webpage)
+```python
+webpage = WebPage.newFURL('http://example.com')
+```
+
+*Then analyze it with Flexxe.*
+
+```python
+flexxe = Flexxe.latest()
+flexxe.analyze(webpage)
+```
+```json
 {
     "status": true,
     "url": "ur.site.here",
@@ -42,6 +52,8 @@ Then analyze it with Flexxe.
         "Braintree"
     ]
 }
+```
 
-Note:
-    Last version to support Python2 was `0.2.2`.  
+
+*Note:*
+    ***Last version to support Python2 was `0.2.2`.***  

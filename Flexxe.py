@@ -37,37 +37,6 @@ class Flexxe:
 
 
 
-    @staticmethod
-    def _find_files(env_location: List[str], potential_files: List[str], default_content: str = "", create: bool = False) -> List[str]:
-        potential_paths = []
-        existent_files  = []
-        env_loc_exists  = False
-
-        for env_var in env_location:
-            if env_var in os.environ:
-                env_loc_exists = True
-                for file_path in potential_files:
-                    potential_paths.append(os.path.join(os.environ[env_var], file_path))
-
-        if not env_loc_exists and create: raise RuntimeError(f"Cannot find any of the env locations {env_location}. ")
-
-        #? If file exist, add to list
-        for p in potential_paths:
-            if os.path.isfile(p): existent_files.append(p)
-
-        #? If no file foud and create=True, init new file
-        if len(existent_files) == 0 and create:
-            os.makedirs(os.path.dirname(potential_paths[0]), exist_ok=True)
-            with open(potential_paths[0], "w", encoding='utf-8') as config_file:
-                config_file.write(default_content)
-            existent_files.append(potential_paths[0])
-
-        return existent_files
-
-
-
-
-
     def _hasTechnology(self, tech_fingerprint: Fingerprint, webpage: IWebPage) -> bool:
         """
         Determine whether the web page matches the technology signature.
@@ -114,7 +83,7 @@ class Flexxe:
             if pattern.regex.search(webpage.html):
                 self._setDetectedApp(webpage.url, tech_fingerprint, 'html', pattern, value=webpage.html)
                 has_tech = True
-                
+
         #? analyze dom patterns
         #* css selector, list of css selectors, or dict from css selector to dict with some of keys:
         #*           - "exists": "": only check if the selector matches somthing, equivalent to the list form. 
@@ -194,7 +163,7 @@ class Flexxe:
         Sort version number (find the longest version number that *is supposed to* contains all shorter detected version numbers).
         """
         if len(detected_tech.versions) >= 1: return
-        detected_tech.versions = sorted(detected_tech.versions, key=self._cmp_to_key(self._sort_app_versions))
+        detected_tech.versions = sorted(detected_tech.versions, key=self._cmpToKey(self._sortAppVersions))
 
 
 
@@ -325,14 +294,14 @@ class Flexxe:
 
 
 
-    def _sort_app_versions(self, version_a: str, version_b: str) -> int:
+    def _sortAppVersions(self, version_a: str, version_b: str) -> int:
         return len(version_a) - len(version_b)
 
 
 
 
 
-    def _cmp_to_key(self, mycmp: Callable[..., Any]):
+    def _cmpToKey(self, mycmp: Callable[..., Any]):
         """
         Convert a cmp= function into a key= function
         """

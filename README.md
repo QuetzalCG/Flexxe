@@ -1,4 +1,4 @@
-## Flexxe: Lib 
+## Flexxe <3
 
 ***Library to visualize the technologies used by a website, based on wappalizer***
 
@@ -23,23 +23,13 @@ pip install -r Flexxe/requirements.txt
 
 
 ## How Use Flexxe!
-*The API exposes two objects*: ``Flexxe.Flexxe`` *and* ``Flexxe.WebPage``. 
 
 ```python
-from Flexxe import Flexxe, WebPage
-```
+import Flexxe
 
-*First create a WebPage. The following code creates a webpage with the* ``request`` *module.*
+flexxe = Flexxe.analize(url = 'https://www.example.com')
 
-```python
-webpage = WebPage.newFURL('http://example.com')
-```
-
-*Then analyze it with Flexxe.*
-
-```python
-flexxe = Flexxe.latest()
-flexxe.analyze(webpage)
+print(flexxe)
 ```
 
 ***Response:***

@@ -1,7 +1,10 @@
 Flexxe | Install
 -----------------
-``git clone https://github.com/QuetzalCG/Flexxe.git``
-``pip install -r Flexxe/requirements.txt``
+``-- Step 1``
+>>> git clone https://github.com/QuetzalCG/Flexxe.git
+
+``-- Step 2``
+>>> pip install -r Flexxe/requirements.txt
 
 Flexxe | USAGE 
 -----------------

@@ -3,7 +3,7 @@ Flexxe | Install
 ``git clone https://github.com/QuetzalCG/Flexxe.git``
 ``pip install -r Flexxe/requirements.txt``
 
-Flexxe | USAGE
+Flexxe | USAGE 
 -----------------
 
 The API exposes two objects: ``Flexxe.Flexxe`` and ``Flexxe.WebPage``. 

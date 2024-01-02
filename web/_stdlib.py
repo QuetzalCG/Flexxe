@@ -5,10 +5,6 @@ from cached_property import cached_property # type: ignore
 from ._common import BaseWebPage, BaseTag
 from dom_query import select_all # type: ignore
 
-# Parsing HTLM with built-in libraries is difficult, we should not reinvent the wheel here. 
-# We provide this module only as a backup for environments where lxml cannot be installed.
-# https://stackoverflow.com/questions/2676872/how-to-parse-malformed-html-in-python-using-standard-libraries
-
 
 
 class Tag(BaseTag):

@@ -6,6 +6,6 @@ Welcome to ``Flexxe`` API documentation!
 
 from .Flexxe import Flexxe, analyze
 from .web import WebPage
-__all__ = ["Wappalyzer", 
+__all__ = ["Flexxe", 
            "WebPage", 
            "analyze"]

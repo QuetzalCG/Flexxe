@@ -131,8 +131,7 @@ class BaseWebPage(IWebPage):
 
 
     @classmethod
-    async def newFUrlAsync(cls, url: str, verify: bool = True,
-                                 aiohttp_client_session: aiohttp.ClientSession = None, **kwargs:Any) -> IWebPage:
+    async def newFUrlAsync(cls, url: str, verify: bool = True, aiohttp_client_session: aiohttp.ClientSession = None, **kwargs:Any) -> IWebPage:
         """
         Same as newFURL only Async.
 

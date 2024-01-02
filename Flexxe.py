@@ -10,7 +10,7 @@ from fingerprint import Fingerprint, Pattern, Technology, Category
 #//* Flexxe Lib - Bassed in Wappalizer
 class Flexxe:
     def __init__(self, categories:Dict[str, Any], technologies:Dict[str, Any]) -> None:
-        self.categories: Mapping[str, Category]      = {k:Category(**v) for k,v in categories.items()}
+        self.categories:   Mapping[str, Category]    = {k:Category(**v) for k,v in categories.items()}
         self.technologies: Mapping[str, Fingerprint] = {k:Fingerprint(name=k, **v) for k,v in technologies.items()}
         self.detected_technologies: Dict[str, Dict[str, Technology]] = {}
         self._confidence_regexp = re.compile(r"(.+)\\;confidence:(\d+)")
@@ -305,7 +305,7 @@ class Flexxe:
         """
         Convert a cmp= function into a key= function
         """
-        # https://docs.python.org/3/howto/sorting.html
+        
         class CmpToKey:
             def __init__(self, obj, *args):
                 self.obj = obj

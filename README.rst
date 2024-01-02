@@ -14,7 +14,7 @@ First create a WebPage. The following code creates a webpage with the ``request`
 
 >>> webpage = WebPage.newFURL('http://example.com')
 
-Then analyze it with Flexxe. 
+Then analyze it with Flexxe.
 
 >>> flexxe = Flexxe.latest()
 >>> flexxe.analyze(webpage)

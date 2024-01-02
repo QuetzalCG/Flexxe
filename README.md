@@ -22,7 +22,7 @@ pip install -r Flexxe/requirements.txt
 from Flexxe import Flexxe, WebPage
 ```
 
-*First create a WebPage. The following code creates a webpage with the* ``request`` *module. *
+*First create a WebPage. The following code creates a webpage with the* ``request`` *module.*
 
 ```python
 webpage = WebPage.newFURL('http://example.com')
@@ -58,5 +58,4 @@ flexxe.analyze(webpage)
 
 
 *Note:*
-
-    ***Last version to support Python2 was `0.2.2`.***  
+    ***Last version to support Python2 was*** `0.2.2`.  
